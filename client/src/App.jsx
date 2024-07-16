@@ -1,5 +1,26 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';import Home from "./pages/Home";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
+import SignUp from "./pages/SignUp";
+import Notes from "./pages/Notes";
+import Programming from "./pages/Programming";
+import Dashboard from "./pages/Dashboard";
+import SignIn from "./pages/SignIn";
+
 export default function App() {
   return (
-    <h1 className='text-3xl text-red-700'>App</h1>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/notes" element={<Notes />} />
+        <Route path="/programming" element={<Programming />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
