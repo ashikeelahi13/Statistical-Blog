@@ -22,10 +22,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import NotFound from './pages/NotFound'
+import Header from './components/Header';
 
 export default function App() {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path="/about" element={About} />
@@ -34,4 +36,13 @@ export default function App() {
     </BrowserRouter>
   )
 }
+```
+We use flowbite for navebar
+```bash
+npm i flowbite-react
+```
+
+We use react icons
+```bash
+npm i react-icons
 ```
